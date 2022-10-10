@@ -1,0 +1,188 @@
+#!/usr/bin/python3
+
+import sys
+import math
+
+
+def is_err(a, b, c):
+    try:
+        if not (a or not b or not c):
+            pass
+    except:
+        exit(84)
+
+
+def error_funct():
+    a = float(sys.argv[4])
+    b = int(sys.argv[1])
+    exit(84) if (not (b - 1) >= a or not 0 <= a) else 0
+
+
+def my_check_file(tab):
+    ba = '\n'
+    try:
+        with open(sys.argv[2], "r") as file:
+            for j in file:
+                tab += j.split(ba)
+    except IOError:
+        exit(84)
+
+
+def err_func():
+    a = float(sys.argv[1])
+    b = float(sys.argv[3])
+    c = int(sys.argv[4])
+    exit(84) if (len(sys.argv) != 5) else 0
+    is_err(a, b, c)
+
+
+def func_fac(i, j) -> int:
+    v = math.factorial(j)
+    h = math.factorial(i)
+    u = (math.factorial(j - i))
+
+    result = v / (h * u)
+    return (result)
+
+
+def is_loop(x, a_list, arr) -> int:
+    for y in range(a_list):
+        arr[x].append(0)
+    return (0)
+
+
+def is_loop1(a_list, arr) -> int:
+    for f in range(a_list):
+        tab = list()
+        arr.append(tab)
+        u = is_loop(f, a_list, arr)
+    return (0)
+
+
+def is_error(a):
+    try:
+        if (0 >= a):
+            pass
+    except:
+        exit(84)
+
+
+def err_func1():
+    a = int(sys.argv[1])
+    is_error(a)
+
+
+def the_error():
+    a = float(sys.argv[3])
+    b = int(sys.argv[1])
+    exit(84) if (not (b - 1) >= a or not 0 <= a) else 0
+
+
+def my_filt(tab) -> list:
+    tab = filter(None, tab)
+    return (tab)
+
+
+def add_elem(arr, tab) -> list:
+    for j in tab:
+        arr.append(j)
+    return (tab)
+
+
+def elem1_add(k):
+    try:
+        if not int(k):
+            pass
+    except:
+        exit(84)
+
+
+def arr_loop(k, var) -> int:
+    for k in var:
+        elem1_add(k)
+    return(0)
+
+
+def elem2_add(var):
+    exit(84) if (len(var) < 3) else 0
+    arr_loop(0, var)
+
+
+def look_argv() -> list:
+    tab = []
+    err_func
+    err_func1()
+    the_error()
+    error_funct()
+    my_check_file(tab)
+    exit(84) if (len(tab) == 0) else 0
+    tab = my_filt(tab)
+    arr = list()
+    tab = add_elem(arr, tab)
+    return (arr)
+
+
+def look1_file(var, j):
+    exit(84) if (j[-1] == ';') else 0
+    var = j.split(';')
+    elem2_add(var)
+
+
+def look_fich(tab):
+    var = ""
+    for j in tab:
+        look1_file(var, j)
+
+
+def main():
+    look_fich(look_argv())
+    func_main(int(sys.argv[1]), look_argv(),
+              float(sys.argv[3]), float(sys.argv[4]))
+
+
+def comp_func(g, is_arr):
+    t = ';'
+    a, b, c = 0, 1, 2
+    is_arr[int(g.split(t)[a])][int(g.split(t)[b])] = int(int(g.split(t)[c]))
+
+
+def is_head_func(tab, is_arr) -> list:
+    for g in tab:
+        comp_func(g, is_arr)
+    return (is_arr)
+
+
+def n_func_head(p, tab) -> list:
+    is_arr = list()
+
+    is_loop1(p, is_arr)
+    return (is_head_func(tab, is_arr))
+
+
+def beze_curv(d, arr, gt, vx) -> float:
+    answer = 0
+    s = dre = d - 1
+
+    for j in range(0, d):
+        for p in range(0, d):
+            tab = func_fac(j, s) * func_fac(p, dre) * \
+                ((gt / s) ** j * ((1 - (gt / s)) ** (s - j)))
+            tab = tab * ((vx / dre) ** p * ((1 - (vx / dre)) ** (dre - p)))
+            tab = tab * arr[j][p]
+            answer += tab
+    return (answer)
+
+
+def print_func(r, arr, w, l) -> int:
+    yre = beze_curv(r, n_func_head(r, arr), w, l)
+    print("%.2f" % yre)
+    return (0)
+
+
+def func_main(r, arr, w, l) -> int:
+    return(print_func(r, arr, w, l))
+
+
+if __name__ == '__main__':
+    main()
+    exit(0)
