@@ -26,8 +26,6 @@ The project compile with The *Binary ./208dowels*:
 
 Get instruction with:
 
-
-```console
 ./208dowels -h
 ```
 
