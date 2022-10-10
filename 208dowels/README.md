@@ -2,7 +2,7 @@
 
 Language:   Python
 
-Grade acquired : A || Mark : 18/20
+Grade acquired : A || Mark : 18 / 20
 
 A power hammer mass produces dowels. Sometimes, some pieces are defective, and the whole process requires quality control: 100 samples of 100 pieces are randomly taken, and defective pieces are numbered. We get what we call an observed serial. Then, a statistical fit is done using the binomial distribution, and validated using the χ2 test.
 
