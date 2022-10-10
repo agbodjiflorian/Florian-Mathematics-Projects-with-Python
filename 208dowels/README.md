@@ -1,5 +1,9 @@
 # 208dowels : Learn how to parse BigData and make statistics, calculs in python.
 
+Language:   Python
+
+Grade acquired : A || Mark : 18/20
+
 A power hammer mass produces dowels. Sometimes, some pieces are defective, and the whole process requires quality control: 100 samples of 100 pieces are randomly taken, and defective pieces are numbered. We get what we call an observed serial. Then, a statistical fit is done using the binomial distribution, and validated using the χ2 test.
 
 Let’s note x the number of defective pieces, Oxthe size of the observed sample, and Txthe theoretical size. To ensure the consistency of the fit, statistical classes which have less than 10 elements are merged until there are only classes with 10 or more elements. Smallest classes are aggregated first.
