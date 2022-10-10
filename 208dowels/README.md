@@ -1,4 +1,4 @@
-# 208dowels: Learn how to parse BigData and make statistics, calculs in python.
+# 208dowels: Learn how to parse Big Data and make statistics, calculs in python.
 
 Language:   Python
 
